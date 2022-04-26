@@ -21,6 +21,7 @@ function User() {
     const [alldata,setalldata] = useState(Alldata);
    // let filtereddata = userdatas.filter((data) => data.to === user);
     
+
     // console.log(newuserdata);
     // console.log(userdatas);
     // console.log(user)
@@ -57,7 +58,7 @@ function User() {
       }
       else{
         if(count>=1){
-          selectedEmail.pop()
+          selectedEmail.splice(selectedEmail.indexOf(id),1);
           count--;
         }
       }
@@ -80,17 +81,20 @@ function User() {
        //let allsendEmail = JSON.parse(localStorage.getItem("sendemail") || "[]");
        //let filteredEmail = allsendEmail.filter(data=>data.id!==selectedEmail[0]);
       
-      //  localStorage.setItem("sendemail",JSON.stringify(filteredEmail));
-
-       let filteredalldata = alldata.filter(data=>data.id!==selectedEmail[0]);
+      //   localStorage.setItem("sendemail",JSON.stringify(filteredEmail));
+      let datafilter = alldata.filter(data => selectedEmail.indexOf(data.id) < 0);
+      console.log("datafil",datafilter);
+      // let filteredalldata = alldata.filter(data=>data.id!==selectedEmail[0]);
       
         setselectedEmail([]);
-       setalldata(filteredalldata);
+       setalldata(datafilter);
        count = 0;
       //deletenode.classList.add("removeselectedsection");
       // var removesection = document.querySelector(".user-container-data-section");
       //   removesection.classList.add("removeselectedsection");
-        
+      let hideiconssection = document.querySelector(".icons-container");
+        hideiconssection.classList.add('hideicons');
+      
      }
 
       const handlebody = (e) => {
@@ -142,11 +146,11 @@ function User() {
               {alldata && 
                alldata.map((data,i) => (
                 
-                <div className="user-container-data-section" key={i}>
+                <div className="user-container-data-section" key={data.id}>
                    
                     <div className='user-left-section'>
 
-                      <input type="checkbox" className="inputcheckbox" onChange={(e)=>handleSelect(e,data.id)} />
+                      <input type="checkbox" className="inputcheckbox" onChange={(e)=>handleSelect(e,data.id)} value={data.id} name="inboxmail" />
                       {/* <Link to="/receiveemail" onClick={handleClick} className="divselection"></Link> */}
                       <p>{data.username}</p>
                       <p className={`${data.label === 'Adv' ? 'advbg' : ''} || ${data.label === 'client' ? 'clientbg' : ''} || ${data.label === 'document' ? 'documentbg' : ''} `  }>{data?.label}</p>
