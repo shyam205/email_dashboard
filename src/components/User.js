@@ -63,11 +63,11 @@ function User() {
       }
       console.log(count)
       if(count>0){
-        var hideiconssection = document.querySelector(".icons-container");
+        let hideiconssection = document.querySelector(".icons-container");
         hideiconssection.classList.remove('hideicons');
       }
       else{
-        var hideiconssection = document.querySelector(".icons-container");
+        let hideiconssection = document.querySelector(".icons-container");
         hideiconssection.classList.add('hideicons');
       }
       //var removesection = document.querySelector(".user-container-data-section");
