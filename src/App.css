@@ -1,38 +1,493 @@
-.App {
-  text-align: center;
+*{
+  text-decoration: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.sidebar{
+  text-align: center;
+  background-color: #273B4B;
   color: white;
+  height: 100vh;
+  padding: 30px;
+  width: max-content;
+  box-sizing: border-box;
+}
+.hide{
+  display: none;
+}
+.show{
+    display: flex;
+}
+.login{
+  width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container{
+   width: 300px;
+    padding: 30px;
+    background-color: ghostwhite;
+    justify-content: center;
+    text-align: center;
+}
+.login-container input[type="text"],.login-container input[type="password"]{
+    width: 100%;
+    padding: 5px 0;
+}
+.login-container input[type="password"]{
+  margin-top: 20px;
+}
+.login-container input[type="submit"]{
+  margin-top: 20px;
+  padding: 5px 20px;
+  background-color: papayawhip;
+}
+.Sidebarsecondsection{
+  padding: 20px 30px;
+  width: 250px;
+  box-sizing: border-box;
+  height: 90vh;
+}
+.main-section{
+  display: block;
+  /* width: calc(100% - 200px); */
+  width: 100%;
+}
+.main-section-body{
+  display: flex;
+  background-color: #F3F3F4;
+  box-sizing: border-box;
+  width: 100%;
+}
+.navbar{
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  height:10vh;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-container div span svg{
+   width:40px;
+   height: 30px;
+   box-sizing: border-box;
+    fill: white;
+    background-color: #00B494;
+    padding: 5px;
+    cursor: pointer;
+}
+.navbar-container div span svg:hover{
+  opacity: 0.7;
+}
+.Sidebarsecondsection-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Sidebarsecondsection-container section{
+  margin-top: 10px;
+}
+.Sidebarsecondsection-container section a{
+  color:black;
+}
+.compose-mail-button{
+  background-color: #00B494;
+  color: white;
+  font-weight: 600;
+  padding: 12px 25px;
+  outline: none;
+  border:none;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.profilepic{
+  height:50px;
+  width:50px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profilepic img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.user{
+  width:100%;
+  height: 90vh;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0 25px;
+}
+.user-container-data-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none !important;
+    color:black;
+    border-bottom: 0.5px solid gray;
+}
+.user-container-data-section p{
+  text-decoration: none;
+}
+.user-left-section, .user-middle-section, .user-right-section{
+  width:calc(100%/3);
+}
+.user-left-section{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.user-right-section{
+  text-align: end;
+}
+.user-middle-section{
+  height: 25px;
+  overflow: hidden;
+}
+.user-middle-section p{
+  text-decoration: none;
+}
+.user-left-section input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+}
+.user-left-section p{
+  margin-left: 20px;
+}
+.sidebar-box{
+  width: 250px;
+  height: 90vh;
+}
+.clientbg{
+  background-color: orange;
+  padding: 3px 10px;
+  border-radius: 3px;
+  color:white;
+  font-weight: 600;
+}
+.documentbg{
+  background-color: red;
+  padding: 3px 10px;
+  border-radius: 3px;
+  color:white;
+  font-weight: 600;
+}
+.advbg{
+  background-color: #0AC6C9;
+  padding: 3px 10px;
+  border-radius: 3px;
+  color:white;
+  font-weight: 600;
+}
+.main-tag{
+    font-weight: 600;
+    margin: 30px auto 0 20px;
+}
+.circle{
+  height:15px;
+  width: 15px;
+  border-radius: 50%;
+}
+.work{
+  background-color: #00B494;
+}
+.document{
+   background-color: #F25650;
+}
+.social{
+  background-color: blue;
+}
+.advertise{
+  background-color: #0AC6C9;
+}
+.client{
+  background-color: orange;
+}
+.Sidebarsecondsection-container section {
+  width: 150px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: left;
+}
+.Sidebarsecondsection-container section span{
+  display: inline-block;
+  margin-left: 10px;
+}
+.emailpopup-container{
+  height: 400px;
+  width: 400px;
+  text-align: center;
+  background-color: white;
+  color:black;
+  border:1px solid black;
+}
+.emailpopup{
+  position: absolute;
+  right: 50px;
+  bottom: 10px;
+  z-index: 5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.emailpopup-container svg{
+  height:15px;
+  width:15px;
+  margin-right: 12px;
+  fill:white;
+  cursor: pointer;
+}
+.emailpopup-headersection{
+   padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #404040;
+    color:white;
+}
+.emailpopup-headersection p{
+    padding: 0;
+    margin: 0;
+}
+.hidecomposeemail{
+  display: none;
+}
+.sendtoemail-section, .subjectheadline-section{
+  display: flex;
+  padding: 0 15px 5px 15px;
+  text-align: left;
+  margin-top: 10px;
+  border-bottom: 1px solid gray;
+}
+.sendtoemail-section span, .subjectheadline-section span{
+  margin-right: 5px;
+}
+.sendtoemail, .subjectheadline{
+  width: 100%;
+  outline: none;
+}
+.emailbody{
+    height: 45%;
+    outline: none;
+    text-align: left;
+    padding: 15px;
+    overflow-y: scroll;
+}
+.emailbody::-webkit-scrollbar{
+  display: none;
+}
+.sendbutton{
+    padding: 8px 20px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: #1A73E8;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+.bottombutton{
+  text-align: left;
+  padding-left: 15px;
+  padding-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.sentemail-container-data-section{
+  display: flex;
+  height:40px;
+  overflow: hidden;
+  align-items: baseline;
+  padding: 0 20px 2px 0;
+  background-color: aliceblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sentemailr-left-section,.bodysection{
+  width: 50%;
+  display: flex;
+    align-items: center;
+}
+.sentemailr-left-section p{
+  margin-left: 10px;
+}
+.sentemail-right-section{
+  text-align: right;
+}
+.sentemail{
+  width: 100%;
+  height:90vh;
+  background-color: white;
+  padding:20px;
+  box-sizing: border-box;
+}
+
+.username{
+  margin:5px 0 0 0;
+  font-weight: 600;
+}
+.useremail{
+  margin:2px 0 0 0;
+}
+.recieveemail{
+  background-color: white;
+  padding:20px;
+  margin-top: 15px;
+}
+.recieveemail h4{
+  text-decoration: underline;
+}
+.ccadd div{
+    height: 25px;
+    outline: none;
+    text-align: left;
+    padding: 0 10px 0 20px;
+}
+[contentEditable=true]:empty:not(:focus):before{
+  content:attr(data-text)
+}
+.popup-emaildetail{
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  z-index: 5;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 3px 3px #aaaaaa;
+}
+.popup-emaildetail p span{
+  display: inline-block;
+  margin-right: 10px;
+}
+.removemaildetail{
+  display: none;
+}
+.downcaret{
+    font-size: 10px;
+    margin-right: 14px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.removemaildetails{
+  display: none;
+}
+.bodysection{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+.main-body-header{
+  padding: 20px;
+  background-color: white;
+}
+
+.icons-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    box-sizing: border-box;
+}
+.icons-container section div svg{
+  height: 15px;
+  width: 15px;
+}
+.icons-container section input[type="text"]{
+  padding: 5px 10px;
+}
+
+.main-body-container{
+  height: 90vh;
+  background-color: white;
+}
+.main{
+  width: 100%;
+  height:90vh;
+  padding: 0 10px 0 10px;
+}
+.divselection{
+  display: flex;
+    align-items: center;
+    color:black;
+}
+.hideicons{
+  display: none;
+}
+.removeselectedsection{
+  display: none;
+}
+.navbar-leftsection{
+  display: flex;
+  align-items: stretch;
+}
+.navbar-leftsection span{
+  display: inline-block;
+  margin-right: 15px;
+}
+.sidebar-middlesection{
+   display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 30px;
+}
+.sidebar-middlesection svg{
+  height: 20px;
+  margin-right: 10px;
+  fill: white;
+  cursor: pointer;
+}
+.sidebar-middlesection-container{
+  margin-top: 50px;
+  padding-left: 35px;
+}
+.close{
+  display: none;
+}
+.useremail-container span p{
+  display: inline-block;
+}
+.Sidebarsecondsection-container section .inboxmessage {
+    display: inline-block;
+    background-color: orange;
+    padding: 0 5px;
+    color: white;
+}
+.navbar-rightsection{
+  display: flex;
+  align-items: center;
+}
+.messagebox{
+  margin-right: 76px;
+}
+.messagebox svg{
+  height: 15px;
+}
+.messagebox sup{
+  background-color: orange;
+    color: white;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    text-align: center;
+}
+.messagebox button{
+  border: none;
+    outline: none;
+    background: white;
+    cursor: pointer;
+    font-size: 17px;
+}
+.no-notification{
+  visibility: hidden;
 }
